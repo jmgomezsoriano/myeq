@@ -40,7 +40,7 @@ setuptools.setup(
         'prepublish': PrepublishCommand,
     },
     name='myeq',
-    version='0.0.3',
+    version='0.0.4',
     url='https://github.com/jmgomezsoriano/myeq',
     license='lGPLv3',
     author='José Manuel Gómez Soriano',
