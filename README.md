@@ -10,7 +10,7 @@ Equation to measure distances between values.
 ```python
 from myeq.distance import inv_norm_sigmoid
 
-def inv_norm_sigmoid(x: float, s: float = 0.3, t: float = 0.88, p: float = 3.3) -> float:
+def inv_norm_sigmoid(x: float, s: float = 0.3, t: float = 0.88, p: float = 3.3, adjust: bool = False) -> float:
 ```
 
 This function is used to normalize a value that represents a distance using an inverted sigmoid function as following:
@@ -35,4 +35,12 @@ print(inv_norm_sigmoid(0))  # Almost 1: 0.9999853027487737)
 print(inv_norm_sigmoid(1))  # Close to 1: 0.9999910856079368)
 print(inv_norm_sigmoid(3))  # Start to reduce quickly: 0.7633315491944042)
 print(inv_norm_sigmoid(5))  # Very low: 0.12000003643145052)        
+```
+
+The _adjust_ parameter is to force the value 1 when the distance is 0, for example:
+
+```python
+from myeq.distance import inv_norm_sigmoid
+
+print(inv_norm_sigmoid(0, adjust=True))  # Exactly 1.0)
 ```

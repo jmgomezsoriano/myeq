@@ -29,6 +29,7 @@ class DistanceCase(unittest.TestCase):
         self.assertEqual(inv_norm_sigmoid(100), 0.12)
         self.assertEqual(inv_norm_sigmoid(100, 0.1), 0.12)
         self.assertEqual(inv_norm_sigmoid(100, 0.2, 0.8), 0.19999999999999996)
+        self.assertEqual(inv_norm_sigmoid(0, adjust=True), 1.0)
 
 
 if __name__ == '__main__':
